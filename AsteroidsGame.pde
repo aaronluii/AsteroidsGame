@@ -21,6 +21,7 @@ public void draw()
 public void keyPressed () {
  if(key == 'h') {
   sue.myXspeed = 0;
+  sue.myYspeed = 0;
   sue.myCenterX = (int)(Math.random()*500);
   sue.myCenterY = (int)(Math.random()*500);
  }
