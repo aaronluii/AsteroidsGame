@@ -32,9 +32,9 @@ public void keyPressed () {
    sue.accelerate(-0.25);
  }
  if(key == 'a') {
-   sue.turn(10);
+   sue.turn(-10);
  }
  if(key == 'd') {
-   sue.turn(-10);
+   sue.turn(10);
  }
 }
