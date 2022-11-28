@@ -1,4 +1,3 @@
-Floater bob;
 Spaceship sue = new Spaceship();
 Star[] nightSky = new Star[500];
 public void setup() 
