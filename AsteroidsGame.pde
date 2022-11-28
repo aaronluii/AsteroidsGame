@@ -23,6 +23,7 @@ public void keyPressed () {
   sue.myYspeed = 0;
   sue.myCenterX = (int)(Math.random()*500);
   sue.myCenterY = (int)(Math.random()*500);
+  sue.myPointDirection = (int)(Math.random()*500);
  }
  if(key == 'w') {
    sue.accelerate(0.25);
