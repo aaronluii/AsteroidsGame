@@ -19,11 +19,11 @@ public void draw()
 }
 public void keyPressed () {
  if(key == 'h') {
-  sue.myXspeed = 0;
-  sue.myYspeed = 0;
-  sue.myCenterX = (int)(Math.random()*500);
-  sue.myCenterY = (int)(Math.random()*500);
-  sue.myPointDirection = (int)(Math.random()*500);
+  sue.SetXspeed(0);
+  sue.SetYspeed(0);
+  sue.SetCenterX((int)(Math.random()*500));
+  sue.SetCenterY((int)(Math.random()*500));
+  sue.SetPointDirection((int)(Math.random()*500));
  }
  if(key == 'w') {
    sue.accelerate(0.25);
