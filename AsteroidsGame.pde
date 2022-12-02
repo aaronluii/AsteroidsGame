@@ -1,15 +1,11 @@
 Spaceship sue = new Spaceship();
 Star[] nightSky = new Star[500];
-ArrayList<Asteroid> Meteors = new ArrayList <Asteroid>();
-
 public void setup() 
 {
   size(500,500);
   for(int i = 0; i < nightSky.length; i++) {
    nightSky[i] = new Star(); 
-  }
-  for(int i = 0; i < 15; i++) {
-    Meteors.add(new Asteroid());
+   
   }
 }
 public void draw() 
@@ -19,14 +15,6 @@ public void draw()
   sue.move();
   for(int i = 0; i < nightSky.length; i++) {
    nightSky[i].show(); 
-  }
-  for(int i = 0; i < Meteors.size(); i++) {
-    Meteors.get(i).show();
-    Meteors.get(i).move();
-    float myDist = dist((float)Meteors.get(i).getX(), (float)Meteors.get(i).getY(), (float)sue.getX(), (float)sue.getY());
-    if(myDist < 20) {
-     Meteors.remove(i); 
-    }
   }
 }
 public void keyPressed () {
