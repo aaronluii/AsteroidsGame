@@ -36,4 +36,8 @@ public double getX() {
  public double getY() {
     return myCenterY;
   }
+  
+  public double getPointDirection() {
+   return (float)myPointDirection; 
+  }
 }
