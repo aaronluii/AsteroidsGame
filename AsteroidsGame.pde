@@ -1,6 +1,7 @@
 Spaceship sue = new Spaceship();
 Star[] nightSky = new Star[500];
 ArrayList<Asteroid> Meteors = new ArrayList <Asteroid>();
+ArrayList<Bullet> pewpew = new ArrayList <Bullet>();
 
 public void setup() 
 {
@@ -8,7 +9,7 @@ public void setup()
   for(int i = 0; i < nightSky.length; i++) {
    nightSky[i] = new Star(); 
   }
-  for(int i = 0; i < 15; i++) {
+  for(int i = 0; i < 30; i++) {
     Meteors.add(new Asteroid());
   }
 }
@@ -26,6 +27,16 @@ public void draw()
     float myDist = dist((float)Meteors.get(i).getX(), (float)Meteors.get(i).getY(), (float)sue.getX(), (float)sue.getY());
     if(myDist < 20) {
      Meteors.remove(i); 
+    }
+    for (int a = 0; a < pewpew.size(); a++) {
+      pewpew.get(a).show();
+      pewpew.get(a).move();
+      float spoon = dist((float)pewpew.get(a).getX(), (float)pewpew.get(a).getY(), (float)Meteors.get(i).getX(), (float)Meteors.get(i).getY());
+      if (spoon < 50) {
+        pewpew.remove(a);
+        Meteors.remove(i);
+        break;
+      }
     }
   }
 }
@@ -49,4 +60,7 @@ public void keyPressed () {
  if(key == 'd') {
    sue.turn(10);
  }
+ if(key == 'f') {
+   pewpew.add(new Bullet(sue));
+  }
 }
